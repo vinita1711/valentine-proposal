@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* Card */
+.card {
+    position: relative;
+    z-index: 10;
+    width: 320px;
+    background: white;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#yes {
+    background: #ff4d6d;
+    color: white;
+}
+
+#no {
+    background: #ccc;
+}
+
+/* Containers */
+.hearts, .balloons {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Hearts */
+.heart {
+    position: fixed;
+    bottom: 0;
+    font-size: 24px;
+    animation: floatUp 5s linear forwards;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+/* Balloons */
+.balloon {
+    position: fixed;
+    bottom: -40px;
+    font-size: 30px;
+    animation: flyUp 6s linear forwards;
+}
+
+@keyframes flyUp {
+    to {
+        transform: translateY(-120vh);
+        opacity: 0;
+    }
+}
